@@ -1,20 +1,21 @@
 Webpack
+===
 
-Инициализация проекта
+### Инициализация проекта
 
 `cd <Директория проекта>`
 
 `npm init`
 
-установка Webpack
+### установка Webpack
 
 `npm i -D webpack webpack-cli`
 
-, где 
-i - install
--D - --save-dev
+    , где 
+    i - install
+    -D - --save-dev
 
-Добавим в Package.json в scripts
+ Добавим в Package.json в scripts
 
 `"build": "webpack --mode production"`
 
@@ -34,7 +35,8 @@ i - install
 
 по-умолчанию: `'./src/index.js`
 
-Загрузчики - расширение возможностей Webpack, работа с файлами отличными от js, такими как html, css и др. с помощью устанавливаемых модулей
+### Загрузчики 
+это расширение возможностей Webpack, работа с файлами отличными от js, такими как html, css и др. с помощью устанавливаемых модулей
 
 `const path = require('path');` - разрешение путей файлов
 ```
@@ -45,13 +47,13 @@ module.exports = {
       filename: app.bundle.js
     },
 ```
-output - куда выводить создаваемые бандлы и как их называть
+*output* - куда выводить создаваемые бандлы и как их называть
 
 Свойства загрзчиков: \
-test - какие файлы обрабатываются\
-use - каким загрузчиком производится обработка, выбранного типа файла
+*test* - какие файлы обрабатываются\
+*use* - каким загрузчиком производится обработка, выбранного типа файла
 
-Для подключения загрузчика используется свойство rules:
+Для подключения загрузчика используется свойство *rules*:
 
 ```
 module: {
@@ -63,13 +65,14 @@ module: {
           loader: 'babel-loader',
         },
 ```
-просмотр информации о загрузчике
-npm repo raw-loader
+просмотр информации о загрузчике\
+`npm repo raw-loader` \
 другие:
-html-webpack-plugin\
-mini-css-extract-plugin\
-babel-loader\
-html-loader\
-css-loader\
-webpack-dev-server\
-http-server
+
+    html-webpack-plugin
+    mini-css-extract-plugin
+    babel-loader
+    html-loader
+    css-loader
+    webpack-dev-server
+    http-server
