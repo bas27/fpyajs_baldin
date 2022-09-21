@@ -5,7 +5,7 @@ export function calculateTotal(purchases,applyDiscount) {
     }, 0);
 
     if (applyDiscount) {
-        return sum * 0.891;
+        return sum * 0.5;
     }
     return sum;
 }
